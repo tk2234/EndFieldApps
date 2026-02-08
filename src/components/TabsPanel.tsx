@@ -1,8 +1,7 @@
 import React from "react";
 import { Box, Tab, Tabs } from "@mui/material";
-import WeaponList from "@/components/WeaponList";
+import WeaponListPage from "@/pages/WeaponListPage";
 import QuestSearch from "@/components/QusetSearch";
-import WeaponSearch from "@/components/WeaponSearch";
 
 const TabsPanel: React.FC = () => {
   const [tabIndex, setTabIndex] = React.useState(0);
@@ -24,13 +23,11 @@ const TabsPanel: React.FC = () => {
         <Tab label="武器一覧" />
         <Tab label="クエスト検索" />
         <Tab label="ダメージ計算" />
-        <Tab label="武器検索" />
       </Tabs>
       <Box sx={{mt: 2}}>
-        {tabIndex === 0 && <WeaponList />}
+        {tabIndex === 0 && <WeaponListPage />}
         {tabIndex === 1 && <QuestSearch />}
         {tabIndex === 2 && <div>ダメージ計算コンポーネント</div>}
-        {tabIndex === 3 && <WeaponSearch />}
       </Box>
   </Box>
   )

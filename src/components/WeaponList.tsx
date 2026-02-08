@@ -1,22 +1,28 @@
 import React from "react";
-import { Box, Card, CardContent, Typography, Grid } from "@mui/material";
-import { RARITY_BG_STYLE } from "@/constants/rarityColor";
-import { useWeaponContext } from "@/contexts/WeaponContext";
+import { useState } from "react";
+import { Box, Grid } from "@mui/material";
 import WeaponCard from "@/components/WeaponCard";
+import FilterBar from "@/components/FilterBar";
+import { useWeapons } from "@/hooks/useWeapons";
+import type { WeaponFilter } from "@/types/filter";
 
+type Props = {
+  filter: WeaponFilter;
+};
 
-
-const WeaponList: React.FC = () => {
-  const weapons = useWeaponContext();
+const WeaponList: React.FC<Props> = ({ filter }) => {
+  const weapons = useWeapons(filter);
 
   return (
-    <Grid container spacing={2} justifyContent="center">
-      {weapons.map((w) => (
-        <Grid key={w.name}>
-          <WeaponCard weapon={w} />
-        </Grid>
-      ))}
-    </Grid>
+    <Box>
+      <Grid container spacing={2} justifyContent="center">
+        {weapons.map((w) => (
+          <Grid key={w.name}>
+            <WeaponCard weapon={w} />
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   );
 }
 

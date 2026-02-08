@@ -1,10 +1,27 @@
 import { useMemo } from "react";
-import rawWeapons from "@/data/weapons.json";
 import type { Weapon } from "@/types";
-import { normalizeWeapon } from "@/utils/normalizeWeapon";
+import type { WeaponFilter } from "@/types/filter";
+import { useWeaponContext } from "@/contexts/WeaponContext";
 
-export function useWeapons(): Weapon[] {
+
+/* weaponContext からfilterかけてWeapon[]を返す */
+export function useWeapons(filter: WeaponFilter): Weapon[] {
+  const { weapons } = useWeaponContext();
+
   return useMemo(() => {
-    return rawWeapons.map(normalizeWeapon);
-  }, []);
+    if (!filter) return weapons;
+
+    return weapons.filter((w) => {
+      if (filter.type && w.weaponType !== filter.type) return false;
+      if (filter.rarity && w.rarity !== filter.rarity) return false;
+      if (
+        filter.effects?.length &&
+        !filter.effects.includes(w.baseEffect)
+      ) {
+        return false;
+      }
+
+      return true;
+    });
+  }, [weapons, filter]);
 }

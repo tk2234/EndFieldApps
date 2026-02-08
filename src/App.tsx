@@ -1,17 +1,16 @@
 import React from "react";
 
-import { WeaponContext } from "@/contexts/WeaponContext";
-import { useWeapons } from "@/hooks/useWeapons";
+import { WeaponProvider } from "./contexts/WeaponContext";
 
 import TabsPanel from "@/components/TabsPanel";
 
 
 const App: React.FC = () => {
-  const weapons = useWeapons();
+
   return (
-    <WeaponContext.Provider value={weapons}>
+    <WeaponProvider>
       <TabsPanel />
-    </WeaponContext.Provider>
+    </WeaponProvider>
   );
 };
 
