@@ -3,8 +3,8 @@ import { Box, FormControl, Select, MenuItem, InputLabel, Button, Stack, Collapse
 import { ExpandMore } from '@mui/icons-material';
 
 import type { WeaponFilter } from '@/types/filter';
-import { Expand } from '@mui/icons-material';
 
+import effects from '@/data/effects.json';
 
 
 type Props = {
@@ -91,9 +91,56 @@ const FilterBar: React.FC<Props> = ({ filter, onChange }: Props) => {
           }}
         >
           <Stack direction="row" spacing={2}>
-            {/* Additional filters can be added here */}
-            <Box>追加フィルター1</Box>
-            <Box>追加フィルター2</Box>
+            {/* Base Effect Filter */ }
+            <FormControl size="small" sx={{ minWidth: 120, flex: "0 0 auto" }}>
+              <InputLabel id="base-effect-label">基礎効果</InputLabel>
+              <Select
+                value={filter.baseEffect ?? ""}
+                label="baseEffect"
+                onChange={ (e) =>
+                  onChange({ ...filter, baseEffect: e.target.value || undefined })
+                }
+              >
+                <MenuItem value="">全ての基礎効果</MenuItem>
+                {effects.find((e => e.type === "baseEffect"))?.effects.map((effect) => (
+                  <MenuItem key={effect} value={effect}>{effect}</MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+            {/* Extra Effect Filter */ }
+            <FormControl size="small" sx={{ minWidth: 120, flex: "0 0 auto" }}>
+              <InputLabel id="extra-effect-label">追加効果</InputLabel>
+              <Select
+                value={filter.extraEffect ?? ""}
+                label="extraEffects"
+                onChange={ (e) =>
+                  onChange({ ...filter, extraEffect: e.target.value || undefined })
+                }
+              >
+                <MenuItem value="">全ての追加効果</MenuItem>
+                {effects.find((e => e.type === "extraEffect"))?.effects.map((effect) => (
+                  <MenuItem key={effect} value={effect}>{effect}</MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+            {/* Skill Effect Filter */ }
+            <FormControl size="small" sx={{ minWidth: 120, flex: "0 0 auto" }}>
+              <InputLabel id="skill-effect-label">スキル効果</InputLabel>
+              <Select
+                value={filter.skillEffect ?? ""}
+                label="skillEffect"
+                onChange={ (e) =>
+                  onChange({ ...filter, skillEffect: e.target.value || undefined })
+                }
+              >
+                <MenuItem value="">全てのスキル効果</MenuItem>
+                {effects.find((e => e.type === "skillEffect"))?.effects.map((effect) => (
+                  <MenuItem key={effect} value={effect}>{effect}</MenuItem>
+                ))}
+              </Select>
+            </FormControl>
           </Stack>
         </Paper>
       </Collapse>

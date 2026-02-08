@@ -14,12 +14,9 @@ export function useWeapons(filter: WeaponFilter): Weapon[] {
     return weapons.filter((w) => {
       if (filter.type && w.weaponType !== filter.type) return false;
       if (filter.rarity && w.rarity !== filter.rarity) return false;
-      if (
-        filter.effects?.length &&
-        !filter.effects.includes(w.baseEffect)
-      ) {
-        return false;
-      }
+      if (filter.baseEffect && w.baseEffect !== filter.baseEffect) return false;
+      if (filter.extraEffect && w.extraEffect !== filter.extraEffect) return false;
+      if (filter.skillEffect && w.skillEffect !== filter.skillEffect) return false;
 
       return true;
     });

@@ -1,5 +1,7 @@
 export type WeaponFilter = {
   type?: string;
   rarity?: number;
-  effects?: string[];
+  baseEffect?: string;
+  extraEffect?: string;
+  skillEffect?: string;
 };
