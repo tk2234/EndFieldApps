@@ -1,0 +1,452 @@
+[
+  {
+    "name": "作品：蝕跡",
+    "rarity": 6,
+    "weaponType": "アーツユニット",
+    "baseEffect": "意志",
+    "extraEffect": "自然",
+    "skillEffect": "圧制",
+    "attack": 485,
+    "src": "OpusEtchFigure"
+  },
+  {
+    "name": "使命必達",
+    "rarity": 6,
+    "weaponType": "アーツユニット",
+    "baseEffect": "意志",
+    "extraEffect": "必殺技効率",
+    "skillEffect": "追襲",
+    "attack": 500,
+    "src": "DeliveryGuaranteed"
+  },
+  {
+    "name": "破壊ユニット",
+    "rarity": 6,
+    "weaponType": "アーツユニット",
+    "baseEffect": "メイン能力",
+    "extraEffect": "アーツ強度",
+    "skillEffect": "噴発",
+    "attack": 490,
+    "src": "DetonationUnit"
+  },
+  {
+    "name": "O.B.J.術識",
+    "rarity": 5,
+    "weaponType": "アーツユニット",
+    "baseEffect": "知性",
+    "extraEffect": "アーツ強度",
+    "skillEffect": "追襲",
+    "attack": 411,
+    "src": "OBJArtsIdentifier"
+  },
+  {
+    "name": "荒野迷走",
+    "rarity": 5,
+    "weaponType": "アーツユニット",
+    "baseEffect": "知性",
+    "extraEffect": "電磁ダメージ",
+    "skillEffect": "付術",
+    "attack": 411,
+    "src": "WildWanderer"
+  },
+  {
+    "name": "術無",
+    "rarity": 5,
+    "weaponType": "アーツユニット",
+    "baseEffect": "意志",
+    "extraEffect": "必殺技効率",
+    "skillEffect": "昂揚",
+    "attack": 411,
+    "src": "Monaihe"
+  },
+  {
+    "name": "蒼星の囁き",
+    "rarity": 6,
+    "weaponType": "アーツユニット",
+    "baseEffect": "知性",
+    "extraEffect": "回復効率",
+    "skillEffect": "付術",
+    "attack": 495,
+    "src": "DreamsOftheStarryBeach"
+  },
+  {
+    "name": "騎士精神",
+    "rarity": 6,
+    "weaponType": "アーツユニット",
+    "baseEffect": "意志",
+    "extraEffect": "HP",
+    "skillEffect": "治癒",
+    "attack": 485,
+    "src": "ChivalricVirtues"
+  },
+  {
+    "name": "布教の自由",
+    "rarity": 5,
+    "weaponType": "アーツユニット",
+    "baseEffect": "意志",
+    "extraEffect": "回復効率",
+    "skillEffect": "治癒",
+    "attack": 411,
+    "src": "FreedomToProselytize"
+  },
+  {
+    "name": "遺忘",
+    "rarity": 6,
+    "weaponType": "アーツユニット",
+    "baseEffect": "知性",
+    "extraEffect": "アーツダメージ",
+    "skillEffect": "夜幕",
+    "attack": 495,
+    "src": "Oblivion"
+  },
+  {
+    "name": "弔いの詩",
+    "rarity": 5,
+    "weaponType": "アーツユニット",
+    "baseEffect": "知性",
+    "extraEffect": "攻撃力",
+    "skillEffect": "夜幕",
+    "attack": 411,
+    "src": "StanzaOfMemorials"
+  },
+  {
+    "name": "O.B.J.迅速",
+    "rarity": 5,
+    "weaponType": "拳銃",
+    "baseEffect": "敏捷",
+    "extraEffect": "必殺技効率",
+    "skillEffect": "噴発",
+    "attack": 411,
+    "src": "OBJVelocitous"
+  },
+  {
+    "name": "合理的決別",
+    "rarity": 5,
+    "weaponType": "拳銃",
+    "baseEffect": "筋力",
+    "extraEffect": "灼熱ダメージ",
+    "skillEffect": "追襲",
+    "attack": 411,
+    "src": "RationalFarewell"
+  },
+  {
+    "name": "楔",
+    "rarity": 6,
+    "weaponType": "拳銃",
+    "baseEffect": "メイン能力",
+    "extraEffect": "会心率",
+    "skillEffect": "付術",
+    "attack": 500,
+    "src": "Wedge"
+  },
+  {
+    "name": "同類共食",
+    "rarity": 6,
+    "weaponType": "拳銃",
+    "baseEffect": "メイン能力",
+    "extraEffect": "アーツダメージ",
+    "skillEffect": "付術",
+    "attack": 490,
+    "src": "Clannibal"
+  },
+  {
+    "name": "ナビゲーター",
+    "rarity": 6,
+    "weaponType": "拳銃",
+    "baseEffect": "知性",
+    "extraEffect": "寒冷ダメージ",
+    "skillEffect": "付術",
+    "attack": 490,
+    "src": "Navigator"
+  },
+  {
+    "name": "芸術の独裁者",
+    "rarity": 6,
+    "weaponType": "拳銃",
+    "baseEffect": "知性",
+    "extraEffect": "会心率",
+    "skillEffect": "切骨",
+    "attack": 505,
+    "src": "ArtzyTyrannical"
+  },
+  {
+    "name": "作品：衆生",
+    "rarity": 5,
+    "weaponType": "拳銃",
+    "baseEffect": "敏捷",
+    "extraEffect": "アーツダメージ",
+    "skillEffect": "付術",
+    "attack": 411,
+    "src": "OpusTheLiving"
+  },
+  {
+    "name": "鑑",
+    "rarity": 6,
+    "weaponType": "大剣",
+    "baseEffect": "メイン能力",
+    "extraEffect": "攻撃力",
+    "skillEffect": "圧制",
+    "attack": 500,
+    "src": "Exemplar"
+  },
+  {
+    "name": "クラヴェンガー",
+    "rarity": 6,
+    "weaponType": "大剣",
+    "baseEffect": "筋力",
+    "extraEffect": "攻撃力",
+    "skillEffect": "噴発",
+    "attack": 505,
+    "src": "Khravengger"
+  },
+  {
+    "name": "探龍",
+    "rarity": 5,
+    "weaponType": "大剣",
+    "baseEffect": "筋力",
+    "extraEffect": "必殺技効率",
+    "skillEffect": "噴発",
+    "attack": 411,
+    "src": "SeekerOfDarkLung"
+  },
+  {
+    "name": "昔日の逸品",
+    "rarity": 6,
+    "weaponType": "大剣",
+    "baseEffect": "意志",
+    "extraEffect": "HP",
+    "skillEffect": "効率",
+    "attack": 495,
+    "src": "FormerFinery"
+  },
+  {
+    "name": "O.B.J.重責",
+    "rarity": 5,
+    "weaponType": "大剣",
+    "baseEffect": "筋力",
+    "extraEffect": "HP",
+    "skillEffect": "効率",
+    "attack": 411,
+    "src": "OBJHeavyBurden"
+  },
+  {
+    "name": "千古恒常",
+    "rarity": 5,
+    "weaponType": "大剣",
+    "baseEffect": "筋力",
+    "extraEffect": "アーツ強度",
+    "skillEffect": "残虐",
+    "attack": 411,
+    "src": "AncientCanal"
+  },
+  {
+    "name": "破砕君主",
+    "rarity": 6,
+    "weaponType": "大剣",
+    "baseEffect": "筋力",
+    "extraEffect": "会心率",
+    "skillEffect": "破砕",
+    "attack": 490,
+    "src": "SunderedPrince"
+  },
+  {
+    "name": "大雷斑",
+    "rarity": 6,
+    "weaponType": "大剣",
+    "baseEffect": "筋力",
+    "extraEffect": "HP",
+    "skillEffect": "治癒",
+    "attack": 495,
+    "src": "Thunderberge"
+  },
+  {
+    "name": "J.E.T",
+    "rarity": 6,
+    "weaponType": "長柄武器",
+    "baseEffect": "メイン能力",
+    "extraEffect": "攻撃力",
+    "skillEffect": "圧制",
+    "attack": 500,
+    "src": "JET"
+  },
+  {
+    "name": "求心の槍",
+    "rarity": 5,
+    "weaponType": "長柄武器",
+    "baseEffect": "意志",
+    "extraEffect": "電磁ダメージ",
+    "skillEffect": "圧制",
+    "attack": 411,
+    "src": "CohesiveTraction"
+  },
+  {
+    "name": "勇猛",
+    "rarity": 6,
+    "weaponType": "長柄武器",
+    "baseEffect": "敏捷",
+    "extraEffect": "物理ダメージ",
+    "skillEffect": "巧技",
+    "attack": 495,
+    "src": "Valiant"
+  },
+  {
+    "name": "負山",
+    "rarity": 6,
+    "weaponType": "長柄武器",
+    "baseEffect": "敏捷",
+    "extraEffect": "物理ダメージ",
+    "skillEffect": "効率",
+    "attack": 500,
+    "src": "MountainBearer"
+  },
+  {
+    "name": "O.B.J.鋭矛",
+    "rarity": 5,
+    "weaponType": "長柄武器",
+    "baseEffect": "意志",
+    "extraEffect": "物理ダメージ",
+    "skillEffect": "付術",
+    "attack": 411,
+    "src": "OBJRazorhorn"
+  },
+  {
+    "name": "テルミット・カッター",
+    "rarity": 6,
+    "weaponType": "片手剣",
+    "baseEffect": "意志",
+    "extraEffect": "攻撃力",
+    "skillEffect": "流回",
+    "attack": 490,
+    "src": "ThermiteCutter"
+  },
+  {
+    "name": "不知帰",
+    "rarity": 6,
+    "weaponType": "片手剣",
+    "baseEffect": "意志",
+    "extraEffect": "攻撃力",
+    "skillEffect": "流回",
+    "attack": 500,
+    "src": "NeverRest"
+  },
+  {
+    "name": "O.B.J.軽刃",
+    "rarity": 5,
+    "weaponType": "片手剣",
+    "baseEffect": "敏捷",
+    "extraEffect": "攻撃力",
+    "skillEffect": "流回",
+    "attack": 411,
+    "src": "OBJEdgeofLightness"
+  },
+  {
+    "name": "フェンチェイサー3.0",
+    "rarity": 5,
+    "weaponType": "片手剣",
+    "baseEffect": "筋力",
+    "extraEffect": "寒冷ダメージ",
+    "skillEffect": "圧制",
+    "attack": 411,
+    "src": "Finchaser3.0"
+  },
+  {
+    "name": "大願",
+    "rarity": 6,
+    "weaponType": "片手剣",
+    "baseEffect": "敏捷",
+    "extraEffect": "攻撃力",
+    "skillEffect": "付術",
+    "attack": 500,
+    "src": "GrandVision"
+  },
+  {
+    "name": "堅城鋳造者",
+    "rarity": 5,
+    "weaponType": "片手剣",
+    "baseEffect": "知性",
+    "extraEffect": "必殺技効率",
+    "skillEffect": "昂揚",
+    "attack": 411,
+    "src": "Fortmaker"
+  },
+  {
+    "name": "十二問",
+    "rarity": 5,
+    "weaponType": "片手剣",
+    "baseEffect": "敏捷",
+    "extraEffect": "攻撃力",
+    "skillEffect": "付術",
+    "attack": 411,
+    "src": "TwelveQuestions"
+  },
+  {
+    "name": "鋼鉄余音",
+    "rarity": 5,
+    "weaponType": "片手剣",
+    "baseEffect": "敏捷",
+    "extraEffect": "物理ダメージ",
+    "skillEffect": "巧技",
+    "attack": 411,
+    "src": "SunderingSteel"
+  },
+  {
+    "name": "フーヤオ",
+    "rarity": 6,
+    "weaponType": "片手剣",
+    "baseEffect": "メイン能力",
+    "extraEffect": "会心率",
+    "skillEffect": "夜幕",
+    "attack": 495,
+    "src": "RapidAscent"
+  },
+  {
+    "name": "輝かしき名声",
+    "rarity": 6,
+    "weaponType": "片手剣",
+    "baseEffect": "メイン能力",
+    "extraEffect": "物理ダメージ",
+    "skillEffect": "残虐",
+    "attack": 490,
+    "src": "EminentRepute"
+  },
+  {
+    "name": "白夜新星",
+    "rarity": 6,
+    "weaponType": "片手剣",
+    "baseEffect": "メイン能力",
+    "extraEffect": "アーツ強度",
+    "skillEffect": "付術",
+    "attack": 505,
+    "src": "WhiteNightNova"
+  },
+  {
+    "name": "ダークトーチ",
+    "rarity": 6,
+    "weaponType": "片手剣",
+    "baseEffect": "知性",
+    "extraEffect": "灼熱ダメージ",
+    "skillEffect": "付術",
+    "attack": 490,
+    "src": "UmbralTorch"
+  },
+  {
+    "name": "抑止",
+    "rarity": 5,
+    "weaponType": "片手剣",
+    "baseEffect": "敏捷",
+    "extraEffect": "物理ダメージ",
+    "skillEffect": "夜幕",
+    "attack": 411,
+    "src": "Aspirant"
+  },
+  {
+    "name": "フレイムフォージ",
+    "rarity": 6,
+    "weaponType": "片手剣",
+    "baseEffect": "知性",
+    "extraEffect": "攻撃力",
+    "skillEffect": "夜幕",
+    "attack": 510,
+    "src": "ForgebornScathe"
+  }
+]
