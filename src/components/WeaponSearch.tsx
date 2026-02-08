@@ -1,10 +1,15 @@
 import React from 'react'
+
 import { Box, Card, CardContent, Typography, Grid, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
-import effects from '@/data/effects.json';
+import WeaponCard from './WeaponCard';
+
+import { useWeaponContext } from "@/contexts/WeaponContext";
 
 import type { Weapon } from '@/types';
-import { useWeaponContext } from "@/contexts/WeaponContext";
+
+
+import effects from '@/data/effects.json';
 
 
 
@@ -73,27 +78,7 @@ const WeaponSearch = () => {
         <Typography variant="h6">検索結果: {filteredWeapons.length} 件</Typography>
         <Grid container spacing={2} justifyContent="center">
           {filteredWeapons.map((w) => (
-            <Grid key={w.name}>
-              <Card sx={{ minWidth: 300 }}>
-                <CardContent>
-                  <Box
-                    display={"flex"}
-                    alignItems={"center"}
-                  >
-                    <img
-                      src={`src/assets/icons/weapons/${w.src}.png`}
-                      alt={w.src}
-                      style={{ width: 64, height: 64, marginRight: 8}}
-                    />
-                    <Typography variant="h6">{w.name}</Typography>
-                  </Box>
-                  <Typography>レア度: {w.rarity}</Typography>
-                  <Typography>基礎効果: {w.baseEffect}</Typography>
-                  <Typography>付加効果: {w.extraEffect}</Typography>
-                  <Typography>スキル効果: {w.skillEffect}</Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+            <WeaponCard key={w.name} weapon={w} />
           ))}
         </Grid>
       </Box>
