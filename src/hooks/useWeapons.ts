@@ -1,17 +1,15 @@
 import { useMemo } from "react";
 import type { Weapon } from "@/types";
 import type { WeaponFilter } from "@/types/filter";
+import type { WeaponSort } from "@/types/sort";
 import { useWeaponContext } from "@/contexts/WeaponContext";
 
 
 /* weaponContext からfilterかけてWeapon[]を返す */
-export function useWeapons(filter: WeaponFilter): Weapon[] {
+export function useWeapons(filter: WeaponFilter, sort: WeaponSort): Weapon[] {
   const { weapons } = useWeaponContext();
 
-  return useMemo(() => {
-    if (!filter) return weapons;
-
-    return weapons.filter((w) => {
+  const filtered = weapons.filter((w) => {
       if (filter.type && w.weaponType !== filter.type) return false;
       if (filter.rarity && w.rarity !== filter.rarity) return false;
       if (filter.baseEffect && w.baseEffect !== filter.baseEffect) return false;
@@ -20,5 +18,21 @@ export function useWeapons(filter: WeaponFilter): Weapon[] {
 
       return true;
     });
-  }, [weapons, filter]);
+
+    const sorted = [...filtered].sort((a, b) => {
+      switch (sort) {
+        case "attack-desc":
+          return b.attack - a.attack;
+        case "attack-asc":
+          return a.attack - b.attack;
+        case "rarity-desc":
+          return b.rarity - a.rarity;
+        case "rarity-asc":
+          return a.rarity - b.rarity;
+        default:
+          return 0;
+      }
+    });
+
+  return sorted
 }

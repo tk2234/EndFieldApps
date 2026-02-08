@@ -3,9 +3,9 @@ import { useState } from "react";
 import weapons from "@/data/weapons.json";
 import quests from "@/data/quests.json";
 
-import type { Weapon, Quest } from "../types";
+import type { Weapon, Quest } from "@/types";
 
-const QuestSearch: React.FC = () => {
+export const QuestSearch: React.FC = () => {
   const [selectedWeapon, setSelectedWeapon] = useState<Weapon | null>(null);
 
   // 選んだ武器にマッチするクエストを返す
@@ -67,5 +67,3 @@ const QuestSearch: React.FC = () => {
     </div>
   );
 }
-
-export default QuestSearch;

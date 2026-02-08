@@ -1,17 +1,17 @@
 import React from "react";
-import { useState } from "react";
 import { Box, Grid } from "@mui/material";
-import WeaponCard from "@/components/WeaponCard";
-import FilterBar from "@/components/FilterBar";
+import { WeaponCard } from "./WeaponCard";
 import { useWeapons } from "@/hooks/useWeapons";
 import type { WeaponFilter } from "@/types/filter";
+import type { WeaponSort } from "@/types/sort";
 
 type Props = {
   filter: WeaponFilter;
+  sort: WeaponSort
 };
 
-const WeaponList: React.FC<Props> = ({ filter }) => {
-  const weapons = useWeapons(filter);
+export const WeaponList: React.FC<Props> = ({ filter, sort }: Props) => {
+  const weapons = useWeapons(filter, sort);
 
   return (
     <Box>
@@ -25,5 +25,3 @@ const WeaponList: React.FC<Props> = ({ filter }) => {
     </Box>
   );
 }
-
-export default WeaponList;

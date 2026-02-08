@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Tab, Tabs } from "@mui/material";
-import WeaponListPage from "@/pages/WeaponListPage";
-import QuestSearch from "@/components/QusetSearch";
+import { WeaponListPage } from "@/pages/weaponListPage"
+import { QuestSearch } from "@/pages/questSearchPage";
 
 const TabsPanel: React.FC = () => {
   const [tabIndex, setTabIndex] = React.useState(0);

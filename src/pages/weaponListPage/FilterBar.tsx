@@ -12,7 +12,7 @@ type Props = {
   onChange: (newFilter: WeaponFilter) => void;
 };
 
-const FilterBar: React.FC<Props> = ({ filter, onChange }: Props) => {
+export const FilterBar: React.FC<Props> = ({ filter, onChange }: Props) => {
   const [open, setOpen] = useState(false);
 
   const handleToggleAdditionalFilters = () => {
@@ -147,5 +147,3 @@ const FilterBar: React.FC<Props> = ({ filter, onChange }: Props) => {
     </Box>
   )
 }
-
-export default FilterBar;

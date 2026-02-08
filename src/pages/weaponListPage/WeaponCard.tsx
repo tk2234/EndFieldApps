@@ -1,7 +1,7 @@
 import { Card, CardContent, Typography, Box, Chip } from "@mui/material";
 
 
-import WeaponIcon from "./WeaponIcon";
+import { WeaponIcon } from "./WeaponIcon";
 
 import type { Weapon } from "@/types";
 
@@ -9,7 +9,7 @@ type Props = {
   weapon: Weapon;
 }
 
-const WeaponCard: React.FC<Props> = ({ weapon }: Props) => {
+export const WeaponCard: React.FC<Props> = ({ weapon }: Props) => {
 
   return (
     <Card
@@ -84,5 +84,3 @@ const WeaponCard: React.FC<Props> = ({ weapon }: Props) => {
     </Card>
   )
 }
-
-export default WeaponCard;

@@ -8,7 +8,7 @@ type Props = {
   src: string;
 }
 
-const WeaponIcon: React.FC<Props> = ({ rarity, src }: Props) => {
+export const WeaponIcon: React.FC<Props> = ({ rarity, src }: Props) => {
   return (
     <Box
       sx={{
@@ -43,5 +43,3 @@ const WeaponIcon: React.FC<Props> = ({ rarity, src }: Props) => {
     </Box>
   );
 }
-
-export default WeaponIcon;
