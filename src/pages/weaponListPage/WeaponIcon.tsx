@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import { RARITY_BG_COLOR } from "@/constants/rarityColor";
 
+import { RARITY_COLOR_MAP } from "@/constants/rarityCOlorMap";
 import type { Rarity } from "@/types";
 
 type Props = {
@@ -18,7 +18,7 @@ export const WeaponIcon: React.FC<Props> = ({ rarity, src }: Props) => {
         background: `
           linear-gradient(
             to top,
-            ${RARITY_BG_COLOR[rarity]} 0%,
+            ${RARITY_COLOR_MAP[rarity]} 0%,
             rgba(0, 0, 0, 0.2) 30%,
             #1a1a1a 100%
           )

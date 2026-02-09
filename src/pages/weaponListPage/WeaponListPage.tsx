@@ -1,19 +1,22 @@
 import { Box } from "@mui/material";
-import { FilterBar } from "@/pages/weaponListPage/FilterBar";
-import { WeaponList } from "@/pages/weaponListPage/WeaponList";
-import { SortSelect } from "@/pages/weaponListPage/SortSelect";
-import FilterChip from "@/components/common/FilterChip";
+import { FilterBar, WeaponList, SortSelect } from "@/pages/weaponListPage";
+import { FilterChip, SortChip } from "@/components/common";
 import { useState } from "react";
 import type { WeaponFilter } from "@/types/filter";
 import type { WeaponSort } from "@/types/sort";
 
+const DEFAULT_SORT: WeaponSort = "default"
 
 export const WeaponListPage: React.FC = () => {
   const [filter, setFilter] = useState<WeaponFilter>({});
-  const [sort, setSort] = useState<WeaponSort>("rarity-desc")
+  const [sort, setSort] = useState<WeaponSort>(DEFAULT_SORT)
 
   const removeFilter = (key: keyof WeaponFilter) => {
     setFilter({ ...filter, [key]: undefined });
+  };
+
+  const resetSort = () => {
+    setSort(DEFAULT_SORT)
   };
 
   return (
@@ -21,6 +24,7 @@ export const WeaponListPage: React.FC = () => {
       <FilterBar filter={filter} onChange={setFilter} />
       <SortSelect sort={sort} onChange={setSort} />
       <FilterChip filter={filter} onRemove={removeFilter} />
+      <SortChip sort={sort} onRemove={resetSort} />
       <WeaponList filter={filter} sort={sort}/>
     </Box>
   );

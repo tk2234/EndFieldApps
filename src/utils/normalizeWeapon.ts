@@ -1,11 +1,13 @@
-import type { Weapon, Rarity } from "@/types";
+import type { Weapon } from "@/types";
 import type { RawWeapon } from "@/types/raw";
 import { toRarity } from "@/utils/rarity";
+import { toWeaponType } from "./weaponType";
+
 
 export function normalizeWeapon(raw: RawWeapon): Weapon {
   return {
     name: raw.name,
-    weaponType: raw.weaponType,
+    weaponType: toWeaponType(raw.weaponType),
     rarity: toRarity(raw.rarity),
     attack: raw.attack,
     baseEffect: raw.baseEffect,

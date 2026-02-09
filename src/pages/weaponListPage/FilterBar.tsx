@@ -4,6 +4,8 @@ import { ExpandMore } from '@mui/icons-material';
 
 import type { WeaponFilter } from '@/types/filter';
 
+import { WEAPON_TYPES, RARITIES } from '@/constants'
+
 import effects from '@/data/effects.json';
 
 
@@ -45,7 +47,11 @@ export const FilterBar: React.FC<Props> = ({ filter, onChange }: Props) => {
             }
           >
             <MenuItem value="">全ての武器種</MenuItem>
-            <MenuItem value="sword">片手剣</MenuItem>
+            {WEAPON_TYPES.map((type) => (
+              <MenuItem key={type.value} value={type.value}>
+                {type.label}
+              </MenuItem>
+            ))}
           </Select>
         </FormControl>
 
@@ -56,12 +62,14 @@ export const FilterBar: React.FC<Props> = ({ filter, onChange }: Props) => {
             value={filter.rarity ?? ""}
             label="レアリティ"
             onChange={ (e) =>
-              onChange({ ...filter, rarity: e.target.value ? Number(e.target.value) : undefined })
+              onChange({ ...filter, rarity: e.target.value })
             }
           >
             <MenuItem value="">全てのレアリティ</MenuItem>
-            {[1,2,3,4,5,6].map((r) => (
-              <MenuItem key={r} value={r}>{r}★</MenuItem>
+            {RARITIES.map( (r) => (
+              <MenuItem key={r.value} value={r.value}>
+                {r.label}
+              </MenuItem>
             ))}
           </Select>
         </FormControl>

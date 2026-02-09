@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import type { Weapon } from "@/types";
 import type { WeaponFilter } from "@/types/filter";
 import type { WeaponSort } from "@/types/sort";

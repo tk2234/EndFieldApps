@@ -1,6 +1,8 @@
+import type { Rarity, WeaponType } from ".";
+
 export type WeaponFilter = {
-  type?: string;
-  rarity?: number;
+  type?: WeaponType;
+  rarity?: Rarity;
   baseEffect?: string;
   extraEffect?: string;
   skillEffect?: string;

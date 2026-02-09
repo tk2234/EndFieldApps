@@ -1,6 +1,6 @@
 import { Card, CardContent, Typography, Box, Chip } from "@mui/material";
 
-
+import { convertWeaponType } from "@/utils/convertWeaponLabel";
 import { WeaponIcon } from "./WeaponIcon";
 
 import type { Weapon } from "@/types";
@@ -54,12 +54,12 @@ export const WeaponCard: React.FC<Props> = ({ weapon }: Props) => {
 
         {/* weaponType */}
         <Box
-  sx={{
-    mt: 1,
-    mb: 0.5,
-    borderTop: "1px solid rgba(0, 0, 0, 0.5)",
-  }}
-/>
+          sx={{
+            mt: 1,
+            mb: 0.5,
+            borderTop: "1px solid rgba(0, 0, 0, 0.5)",
+          }}
+        />
         <Box
           sx={{
             mt: "auto",
@@ -68,7 +68,7 @@ export const WeaponCard: React.FC<Props> = ({ weapon }: Props) => {
           }}
         >
           <Chip
-            label={weapon.weaponType}
+            label={convertWeaponType(weapon.weaponType)}
             size="small"
             variant="filled"
             sx={{

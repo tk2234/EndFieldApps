@@ -1,19 +1,26 @@
 import { Box, Chip } from '@mui/material';
 import type { WeaponFilter } from '@/types/filter';
+import { convertWeaponType } from '@/utils/convertWeaponLabel';
+import { RARITIES } from '@/constants';
 
 type Props = {
   filter: WeaponFilter;
   onRemove: (key: keyof WeaponFilter) => void;
 };
 
-const FilterChip: React.FC<Props> = ({ filter, onRemove }: Props) => {
+export const FilterChip: React.FC<Props> = ({ filter, onRemove }: Props) => {
   const chips: { label: string; key: keyof WeaponFilter }[] = [];
 
   if (filter.type) {
-    chips.push({ label: filter.type, key: 'type' });
+    chips.push({ label: convertWeaponType(filter.type), key: 'type' });
   }
   if (filter.rarity) {
-    chips.push({ label: `${filter.rarity}★`, key: 'rarity' });
+    chips.push({
+      label: `${RARITIES.find( (r) =>
+        r.value === filter.rarity
+      )?.label}`,
+      key: 'rarity'
+    });
   }
   if (filter.baseEffect) {
     chips.push({ label: filter.baseEffect, key: "baseEffect"});
@@ -45,5 +52,3 @@ const FilterChip: React.FC<Props> = ({ filter, onRemove }: Props) => {
     </Box>
   );
 }
-
-export default FilterChip;

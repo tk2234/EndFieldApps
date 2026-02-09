@@ -1,7 +1,7 @@
 export interface Weapon {
   name: string;
   rarity: Rarity;
-  weaponType: string;
+  weaponType: WeaponType;
   attack: number;
   baseEffect: string;
   extraEffect: string;
@@ -25,3 +25,9 @@ export interface EffectType {
 }
 
 export type Rarity =  3 | 4 | 5 | 6;
+export type WeaponType =
+  | "sword"
+  | "greatSword"
+  | "HandCannon"
+  | "artsUnit"
+  | "polearm";
