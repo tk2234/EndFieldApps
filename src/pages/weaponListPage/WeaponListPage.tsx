@@ -5,19 +5,16 @@ import { useState } from "react";
 import type { WeaponFilter } from "@/types/filter";
 import type { WeaponSort } from "@/types/sort";
 import { WeaponControl } from "./weaponControls/WeaponControl";
+import { useWeaponFilter } from "@/hooks";
 
 
 
 export const WeaponListPage: React.FC = () => {
-  const [filter, setFilter] = useState<WeaponFilter>({});
   const [sort, setSort] = useState<WeaponSort>({
     key: "default",
     order: "desc",
   })
-
-  const removeFilter = (key: keyof WeaponFilter) => {
-    setFilter({ ...filter, [key]: undefined });
-  };
+  const { filter, setFilter, removeFilter, activeChips } = useWeaponFilter()
 
   const resetSort = () => {
     {/* TODO: constantsにdefaultを定義する */}
@@ -35,10 +32,9 @@ export const WeaponListPage: React.FC = () => {
         onChangeFilter={setFilter}
         onChangeSort={setSort}
       />
-      <FilterChip filter={filter} onRemove={removeFilter} />
+      <FilterChip chips={activeChips} onRemove={removeFilter} />
       <SortChip sort={sort} onRemove={resetSort} />
       <WeaponList filter={filter} sort={sort}/>
     </Box>
-    
   );
 }
