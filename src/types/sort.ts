@@ -1,14 +1,12 @@
-export type WeaponSort =
+export type WeaponSortKey =
   | "default"
-  | "attack-desc"
-  | "attack-asc"
-  | "rarity-desc"
-  | "rarity-asc";
+  | "attack"
+  | "rarity"
+  | "weaponType";
 
-export const SORT_LABEL: Record<WeaponSort, string> = {
-  "default": "デフォルト",
-  "attack-desc": "攻撃力 高い順",
-  "attack-asc": "攻撃力 低い順",
-  "rarity-desc": "レア度 高い順",
-  "rarity-asc": "レア度 低い順"
+export type SortOrder = "asc" | "desc";
+
+export interface WeaponSort {
+  key: WeaponSortKey;
+  order: SortOrder;
 }

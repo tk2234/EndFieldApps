@@ -1,4 +1,5 @@
 export * from "./weaponTypeMap"
-export * from "./rarityCOlorMap"
+export * from "./rarityColorMap"
 export * from "./weaponTypes"
 export * from "./raritys"
+export * from "./weaponSortKeys"

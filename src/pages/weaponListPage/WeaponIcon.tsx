@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-import { RARITY_COLOR_MAP } from "@/constants/rarityCOlorMap";
+import { RARITY_COLOR_MAP } from "@/constants/rarityColorMap";
 import type { Rarity } from "@/types";
 
 type Props = {

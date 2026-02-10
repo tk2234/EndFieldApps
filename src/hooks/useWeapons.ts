@@ -2,13 +2,18 @@ import type { Weapon } from "@/types";
 import type { WeaponFilter } from "@/types/filter";
 import type { WeaponSort } from "@/types/sort";
 import { useWeaponContext } from "@/contexts/WeaponContext";
+import { WEAPON_TYPE_ORDER } from "@/constants";
 
 
 /* weaponContext からfilterかけてWeapon[]を返す */
 export function useWeapons(filter: WeaponFilter, sort: WeaponSort): Weapon[] {
   const { weapons } = useWeaponContext();
 
-  const filtered = weapons.filter((w) => {
+  function filterWeapons(
+    weapons: Weapon[],
+    filter: WeaponFilter,
+  ): Weapon[] {
+    return weapons.filter((w) => {
       if (filter.type && w.weaponType !== filter.type) return false;
       if (filter.rarity && w.rarity !== filter.rarity) return false;
       if (filter.baseEffect && w.baseEffect !== filter.baseEffect) return false;
@@ -17,21 +22,40 @@ export function useWeapons(filter: WeaponFilter, sort: WeaponSort): Weapon[] {
 
       return true;
     });
+  }
 
-    const sorted = [...filtered].sort((a, b) => {
-      switch (sort) {
-        case "attack-desc":
-          return b.attack - a.attack;
-        case "attack-asc":
-          return a.attack - b.attack;
-        case "rarity-desc":
-          return b.rarity - a.rarity;
-        case "rarity-asc":
-          return a.rarity - b.rarity;
-        default:
-          return 0;
-      }
-    });
+  function sortWeapons(
+    weapons: Weapon[],
+    sort: WeaponSort,
+  ): Weapon[] {
+    if (sort.key === "default") return weapons;
 
-  return sorted
+    const dir = sort.order === "asc" ? 1 : -1;
+
+    const list = [...weapons];
+    switch (sort.key) {
+      case "attack":
+        return list.sort(
+          (a, b) => (a.attack - b.attack) * dir
+        );
+
+      case "rarity":
+        return list.sort(
+          (a, b) => (a.rarity - b.rarity) * dir
+        );
+
+      case "weaponType":
+        return list.sort(
+          (a, b) => (
+            WEAPON_TYPE_ORDER[a.weaponType] -
+              WEAPON_TYPE_ORDER[b.weaponType] * dir
+          )
+        );
+
+      default:
+        return list;
+    }
+  }
+
+  return sortWeapons(filterWeapons(weapons, filter), sort)
 }

@@ -1,7 +1,7 @@
 import { Box, Chip } from "@mui/material";
-import { SORT_LABEL } from "@/types/sort";
 import type { WeaponSort } from "@/types/sort";
 import type React from "react";
+import { WEAPON_SORT_KEYS } from "@/constants";
 
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 }
 
 export const SortChip: React.FC<Props> = ({ sort, onRemove}: Props) => {
-  if (sort === "default") { return }
+  if (sort.key === "default") { return }
   return (
     <Box
       sx={{
@@ -21,7 +21,7 @@ export const SortChip: React.FC<Props> = ({ sort, onRemove}: Props) => {
       }}
     >
       <Chip
-        label={SORT_LABEL[sort]}
+        label={WEAPON_SORT_KEYS.find( (k) => k.key === sort.key)?.label}
         size="small"
         onDelete={() => onRemove(sort)}
       />
